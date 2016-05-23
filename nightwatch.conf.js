@@ -1,6 +1,6 @@
 var seleniumServer = require('selenium-server')
 // var phantomjs = require('phantomjs-prebuilt')
-// var chromedriver = require('chromedriver')
+var chromedriver = require('chromedriver')
 
 module.exports = {
   src_folders: [require('nightwatch-cucumber')()],
@@ -36,11 +36,25 @@ module.exports = {
         path: 'screenshots/default'
       },
       desiredCapabilities: {
-        browserName: 'firefox',
+        browserName: 'chrome',
         javascriptEnabled: true,
         acceptSslCerts: true
+      },
+      selenium: {
+        cli_args: {
+          'webdriver.chrome.driver': chromedriver.path
+        }
       }
+
     },
+    //
+    // firefox: {
+    //   desiredCapabilities: {
+    //     browserName: 'firefox',
+    //     javascriptEnabled: true,
+    //     acceptSslCerts: true
+    //   }
+    // }
     //
     // chrome: {
     //   desiredCapabilities: {

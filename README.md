@@ -5,7 +5,9 @@ I took the example from nightwatch-cucumber and put it into a pull, install and 
 To run the example just
 
 ```
-https://github.com/moerssl/nightwatch-cucumber-example.git
+git clone https://github.com/moerssl/nightwatch-cucumber-example.git
 npm install
-nightwatch
+./node_modules/.bin/nightwatch
 ```
+
+You will find the cucumber feature in the features folder.
